@@ -1,0 +1,95 @@
+ai@a-linux:~$ mkdir HomeWork2
+
+1. Создать каталоги students и mentors в домашней директории, а в них — текстовые файлы students_list.txt и mentors_list.txt соответственно.
+ai@a-linux:~$ cd HomeWork2/
+ai@a-linux:~/HomeWork2$ mkdir students
+ai@a-linux:~/HomeWork2$ mkdir mentors
+ai@a-linux:~/HomeWork2$ ls -l
+итого 8
+drwxrwxr-x 2 ai ai 4096 апр 27 18:04 mentors
+drwxrwxr-x 2 ai ai 4096 апр 27 18:04 students
+
+ai@a-linux:~/HomeWork2$ cd students/
+ai@a-linux:~/HomeWork2/students$ touch students_list.txt
+ai@a-linux:~/HomeWork2/students$ ls -l
+итого 0
+-rw-rw-r-- 1 ai ai 0 апр 27 18:08 students_list.txt
+ai@a-linux:~/HomeWork2/students$ cd ..
+
+ai@a-linux:~/HomeWork2$ touch mentors/mentors_list.txt
+ai@a-linux:~/HomeWork2$ cd mentors/
+ai@a-linux:~/HomeWork2/mentors$ ls -l
+итого 0
+-rw-rw-r-- 1 ai ai 0 апр 27 18:09 mentors_list.txt
+
+2. Открыть созданные в п.1 файлы в любом текстовом редакторе и заполнить их (в соответствии с названием) списком Ваших одногруппников и наставников на данном потоке.
+ai@a-linux:~/HomeWork2/mentors$ nano mentors_list.txt
+ai@a-linux:~/HomeWork2/mentors$ ai@a-linux:~/HomeWork2/mentors$ cat mentors_list.txt
+1. Mentor1 - FirstName1 LastName1
+2. Mentor2 - FirstName2 LastName2
+3. Mentor3 - FirstName3 LastName3
+4. Mentor4 - FirstName4 LastName4
+5. Mentor5 - FirstName5 LastName5
+ai@a-linux:~/HomeWork2/mentors$ cd ..
+
+ai@a-linux:~/HomeWork2$ nano students/students_list.txt
+ai@a-linux:~/HomeWork2$ cat students/students_list.txt
+Student 1 - FirstName1 LastName1
+Student 2 - FirstName2 LastName2
+Student 3 - FirstName3 LastName3
+Student 4 - FirstName4 LastName4
+Student 5 - FirstName5 LastName5
+
+3. Переместите файл mentors_list.txt в папку students.
+ai@a-linux:~/HomeWork2$ mv mentors/mentors_list.txt students/
+ai@a-linux:~/HomeWork2$ cd students
+ai@a-linux:~/HomeWork2/students$ ls -l
+итого 8
+-rw-rw-r-- 1 ai ai 175 апр 27 18:15 mentors_list.txt
+-rw-rw-r-- 1 ai ai 165 апр 27 18:12 students_list.txt
+ai@a-linux:~/HomeWork2/students$ cd ..
+
+4. Удалите папку mentors.
+ai@a-linux:~/HomeWork2$ rm -r -v -i mentors
+rm: удалить каталог 'mentors'? y
+удалён каталог 'mentors'
+ai@a-linux:~/HomeWork2$ ls -l
+итого 4
+drwxrwxr-x 2 ai ai 4096 апр 27 18:20 students
+
+5. Переименуйте папку students в students_and_mentors.
+ai@a-linux:~/HomeWork2$ mv -i -v students students_and_mentors
+переименован 'students' -> 'students_and_mentors'
+ai@a-linux:~/HomeWork2$ ls -l
+итого 4
+drwxrwxr-x 2 ai ai 4096 апр 27 18:20 students_and_mentors
+
+6. Удалите папку students_and_mentors вместе с содержимым.
+ai@a-linux:~/HomeWork2$ rm -r students_and_mentors
+ai@a-linux:~/HomeWork2$ ls -l
+итого 0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
